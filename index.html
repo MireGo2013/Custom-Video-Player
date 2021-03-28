@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Custom Video Player</title>
+  </head>
+  <body>
+    <main class="player_wrapper">
+      <div class="player_video">
+        <video class="video" src="./video/652333414.mp4"></video>
+
+        <div class="controls_wrapper">
+          <div class="progress_wrapper">
+            <div class="progress_fill"></div>
+          </div>
+
+          <button class="play_button" title="Play video">►</button>
+          <div class="range_wrapper">
+            <input
+              class="volume_slider slider"
+              type="range"
+              name="volume"
+              min="0"
+              max="1"
+              value="1"
+			  title="volume"
+              step="0.05"
+            />
+
+            <input
+              class="playbackRate_slider slider"
+              type="range"
+              name="playbackRate"
+              min="0.1"
+              max="2"
+			  title="Playback speed"
+              value="1"
+              step="0.1"
+            />
+          </div>
+          <div class="skip_wrapper">
+            <button class="skip_button prev" data-skip="-10">« 10s</button>
+            <button class="skip_button next" data-skip="10">10s »</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
